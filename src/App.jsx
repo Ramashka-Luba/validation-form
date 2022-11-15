@@ -6,10 +6,11 @@ function App() {
   return (
     <div className="App">
       <div className="wrap">
-        <ValidateBase />
-        {/* <ValidateCustom /> */}
-      </div>
-      
+
+        {/* <ValidateBase /> */}
+        <ValidateCustom />
+        
+      </div>  
     </div>
   );
 }
