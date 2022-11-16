@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 //3- хук должен, что-то возвращать
 
 const useValidation = (value, validations) => { //хук валидирования; //2парам-текущ. знач. и набор валидаторов по которым мы будем проверять импут
-  const [isEmpty, setEmpty] = useState('') // состояние для валидации
+  const [isEmpty, setEmpty] = useState('') // состояние для валидации //пустая строка или нет
   const [minLengthError, setMinLengthError] = useState('') // состояние для валидации
   const [maxLengthError, setMaxLengthError] = useState('')
   const [emailError, setEmailError] = useState('')
@@ -83,7 +83,7 @@ const ValidateCustom = () => {
         <h1>Регистрация</h1>
 
         <input value={email.value}
-          onChange={e => email.onChange(e)}
+          onChange={e => {email.onChange(e); console.log("ghbdtn")}}
           onBlur={e => email.onBlur(e)}
           name='email' type="text"
           placeholder='Enret your email....' />
